@@ -72,13 +72,13 @@ export const listProyek = [
     subtitle: "Poster · NTHU Teacher Education Center · Jun 2025",
     category: "Conference Paper",
     fullDescription:
-      "Presented at the International Symposium on Teacher Agency and Educational Reform (「教師能動性與教育改革」國際學術研討會), National Tsing Hua University Teacher Education Center, June 7, 2025. 5,937 words.\n\nBuilt a RAG pipeline to audit and revise K–12 lesson plans in Taiwan, bridging the SEL gap and expanding teacher agency. Fine-tuned a RoBERTa classifier to detect SEL-relevant instructional objectives, achieving κ = 0.83. SEL coverage increased from 17% to 32% after AI-assisted augmentation (t = 7.82, p < .01).",
+      "Presented at the International Symposium on Teacher Agency and Educational Reform (「教師能動性與教育改革」國際學術研討會), National Tsing Hua University Teacher Education Center, June 7, 2025. 5,937 words.\n\nAwarded Outstanding Paper Award (優秀論文獎) at the 2025 Teacher Agency and Education Reform International Academic Conference, National Tsing Hua University.\n\nBuilt a RAG pipeline to audit and revise K–12 lesson plans in Taiwan, bridging the SEL gap and expanding teacher agency. Fine-tuned a RoBERTa classifier to detect SEL-relevant instructional objectives, achieving κ = 0.83. SEL coverage increased from 17% to 32% after AI-assisted augmentation (t = 7.82, p < .01).",
     borderColor: "#1F97A6",
     gradient: "linear-gradient(145deg, #1F97A6 0%, #0a0a0a 100%)",
     url: "/myportofolioacadmicmeg/assets/paper_nthu_poster.pdf",
     urls: [
       { label: "Paper", href: "/myportofolioacadmicmeg/assets/paper_nthu_poster.pdf" },
-      { label: "獎狀", href: "/myportofolioacadmicmeg/assets/cert_nthu.pdf" },
+      { label: "Award Certificate", href: "/myportofolioacadmicmeg/assets/cert_nthu.pdf" },
     ],
     dad: "100",
   },
