@@ -106,6 +106,10 @@ export const listProyek = [
     borderColor: "#127B99",
     gradient: "linear-gradient(145deg, #127B99 0%, #0a0a0a 100%)",
     url: "/myportofolioacadmicmeg/assets/paper_utaipei.pdf",
+    urls: [
+      { label: "Paper", href: "/myportofolioacadmicmeg/assets/paper_utaipei.pdf" },
+      { label: "Acceptance Letter", href: "/myportofolioacadmicmeg/assets/accept_utaipei.pdf" },
+    ],
     dad: "300",
   },
   // ── AI / NLP Research ─────────────────────────────────────────────────────
