@@ -108,7 +108,7 @@ export const listProyek = [
     url: "/myportofolioacadmicmeg/assets/paper_utaipei.pdf",
     urls: [
       { label: "Paper", href: "/myportofolioacadmicmeg/assets/paper_utaipei.pdf" },
-      { label: "Acceptance Letter", href: "/myportofolioacadmicmeg/assets/accept_utaipei.pdf" },
+      { label: "Certificate", href: "/myportofolioacadmicmeg/assets/accept_utaipei.pdf" },
     ],
     dad: "300",
   },
