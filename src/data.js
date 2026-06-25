@@ -54,7 +54,7 @@ export const listProyek = [
   // ── Conference Papers ──────────────────────────────────────────────────────
   {
     id: 0,
-    image: svgCard("#1F97A6", "AERA 2026 · Roundtable"),
+    image: "/myportofolioacadmicmeg/assets/cover_aera.jpg",
     title: "Integrating RAG-Enhanced AI to Support Cognitive, Affective, and Psychomotor Balance in K–12 Lesson Plans",
     subtitle: "Roundtable · AERA 2026 · SIG-SEL · Los Angeles, Apr 2026",
     category: "Conference Paper",
