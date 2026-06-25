@@ -179,7 +179,7 @@ export const listProyek = [
   // ── Data Science ──────────────────────────────────────────────────────────
   {
     id: 5,
-    image: svgCard("#7C3AED", "Data Science"),
+    image: "/myportofolioacadmicmeg/assets/cover_eeg.jpg",
     title: "Brain-to-Text EEG Neural Decoding",
     subtitle: "Kaggle · PyTorch · Deep Learning",
     category: "Data Science",
