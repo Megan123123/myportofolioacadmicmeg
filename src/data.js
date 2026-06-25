@@ -166,7 +166,7 @@ export const listProyek = [
   {
     id: 4,
     image: svgCard("#577870", "Master's Thesis"),
-    title: "Knowledge Building & OECD Learning Compass Analysis",
+    title: "From Rubric to Reasoning: Designing an AI-Human Workflow to Evaluate OECD-Aligned Competencies Across Pedagogical Paradigms",
     subtitle: "Master's Thesis · n = 133 lesson plans · Mixed-methods",
     category: "AI / NLP Research",
     fullDescription:
