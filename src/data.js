@@ -84,7 +84,7 @@ export const listProyek = [
   },
   {
     id: 2,
-    image: svgCard("#0891b2", "Conference · Oral"),
+    image: "/myportofolioacadmicmeg/assets/cover_iceel.jpg",
     title: "Using AI to Analyze Lesson Plans: An LLM-Assisted Content Audit of 50 K–12 Documents",
     subtitle: "Oral · ICEEL 2025 · Otsuma Women's University · Nov 2025",
     category: "Conference Paper",
