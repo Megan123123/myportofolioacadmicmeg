@@ -112,6 +112,23 @@ export const listProyek = [
     ],
     dad: "300",
   },
+  {
+    id: 4,
+    image: "/myportofolioacadmicmeg/assets/cover_tigps.jpg",
+    title: "Regional Digital Development and the Psychometric Network of School–Family–Classroom Experiences Among Taiwanese Adolescents",
+    subtitle: "Oral · 數位互動與人際情感暨2026臺灣數位世代研究第三屆學術研討會 · Jun 2026",
+    category: "Conference Paper",
+    fullDescription:
+      "Presented at the 3rd Symposium on Digital Interaction, Interpersonal Affect and Taiwan i-Generation Research (數位互動與人際情感暨2026臺灣數位世代研究第三屆學術研討會), Institute of Ethnology, Academia Sinica, June 11-13, 2026. Co-organized by the National Academy for Educational Research; sponsored by NSTC.\n\nUsing TIGPS nationally representative data, estimated EBIC-regularized partial correlation networks (Spearman-based EBICglasso) to examine how regional digital development contexts shape school-family-classroom experience networks among adolescents. Applied Network Comparison Test (NCT) to assess differences in global strength and edge structure across mature and potential digital regions. Findings demonstrate transparent workflow linking large-scale educational data, network psychometrics, and reproducible computation in R.",
+    borderColor: "#1a6b7a",
+    gradient: "linear-gradient(145deg, #1a6b7a 0%, #0a0a0a 100%)",
+    url: "/myportofolioacadmicmeg/assets/paper_tigps.pdf",
+    urls: [
+      { label: "Paper", href: "/myportofolioacadmicmeg/assets/paper_tigps.pdf" },
+      { label: "Certificate", href: "/myportofolioacadmicmeg/assets/cert_tigps.pdf" },
+    ],
+    dad: "350",
+  },
   // ── AI / NLP Research ─────────────────────────────────────────────────────
   {
     id: 4,
