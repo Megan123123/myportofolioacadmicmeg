@@ -178,13 +178,13 @@ export const listProyek = [
     id: 6,
     image: svgCard("#B45309", "Data Science"),
     title: "Bike-Sharing Demand Prediction",
-    subtitle: "Time-series forecasting · pandas · scikit-learn",
+    subtitle: "Time-series forecasting · R · NCCU Data Science",
     category: "Data Science",
     fullDescription:
-      "Built time-series forecasting models predicting bike availability across campus stations. Engineered lag-based and rolling-window statistical features, improving RMSE and MAE relative to baseline approaches. Tech stack: Python, pandas, scikit-learn, matplotlib.",
+      "Final project for NCCU 1132 Data Science course. Built time-series forecasting models predicting bike-sharing demand across stations. Engineered lag-based and rolling-window statistical features, conducted exploratory data analysis, and evaluated multiple model approaches. Delivered a final presentation and written report with reproducible code and visualizations. Tech stack: R, data wrangling, predictive modeling.",
     borderColor: "#B45309",
     gradient: "linear-gradient(145deg, #B45309 0%, #0a0a0a 100%)",
-    url: "https://github.com/Megan123123",
+    url: "https://github.com/Megan123123/finalproject-finalproject_group5-1",
     dad: "600",
   },
   // ── Teaching ──────────────────────────────────────────────────────────────
