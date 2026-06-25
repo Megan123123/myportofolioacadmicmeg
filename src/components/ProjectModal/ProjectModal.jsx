@@ -40,16 +40,17 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
       {/* Modal Content */}
       <div
         onClick={(e) => e.stopPropagation()} // Mencegah modal tertutup saat diklik di dalam
-        className={`bg-zinc-900 border border-violet-500/50 rounded-2xl shadow-2xl shadow-violet-500/20 w-full max-w-lg max-h-[90vh] flex flex-col transform transition-transform duration-300 ${isClosing ? 'animate-out' : 'animate-in'}`}
+        style={{ maxHeight: '90vh', overflowY: 'auto' }}
+        className={`bg-zinc-900 border border-violet-500/50 rounded-2xl shadow-2xl shadow-violet-500/20 w-full max-w-lg transform transition-transform duration-300 ${isClosing ? 'animate-out' : 'animate-in'}`}
       >
         {/* --- GAMBAR PROYEK --- */}
         <img
           src={project.image}
           alt={project.title}
-          className="w-full h-56 object-cover rounded-t-2xl flex-shrink-0"
+          className="w-full h-56 object-cover rounded-t-2xl"
         />
 
-        <div className="p-6 flex flex-col gap-4 overflow-y-auto">
+        <div className="p-6 flex flex-col gap-4">
             <div className="flex justify-between items-start">
                 <h2 className="text-2xl font-bold text-white">{project.title}</h2>
                 <button
