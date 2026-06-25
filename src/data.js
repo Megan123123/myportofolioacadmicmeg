@@ -148,6 +148,22 @@ export const listProyek = [
   },
   // ── AI / NLP Research ─────────────────────────────────────────────────────
   {
+    id: 10,
+    image: "/myportofolioacadmicmeg/assets/cover_nstc.jpg",
+    title: "Interdisciplinary AI Integration Using LLMs: Promoting Balanced Cognitive, Affective, and Psychomotor Development in K-12 Lesson Design",
+    subtitle: "Research Proposal · NCCU 114 AI Interdisciplinary Grant · 2025",
+    category: "AI / NLP Research",
+    fullDescription:
+      "Submitted to National Chengchi University's 114th AI Interdisciplinary Research Concept Grant (AI跨域研究構想補助計畫), Student Division. Advisor: Prof. Huang-Yao Hong.\n\nProposed a five-phase research pipeline applying large language models (LLMs) to audit and enhance K-12 lesson plans for balanced development across Bloom's cognitive, affective, and psychomotor domains. Phase 1: data collection and preprocessing of K-12 lesson plans. Phase 2: semantic analysis and human annotation for domain classification. Phase 3: model construction and optimization (fine-tuning RoBERTa classifier). Phase 4: RAG-based generative AI for lesson augmentation. Phase 5: system deployment and efficacy evaluation.\n\nExpected impacts span educational practice (supporting teachers in designing holistic lesson plans), technology (reproducible LLM pipeline for curriculum analysis), and society (scaling SEL-aligned curriculum reform in Taiwan).",
+    borderColor: "#1F97A6",
+    gradient: "linear-gradient(145deg, #1F97A6 0%, #0a0a0a 100%)",
+    url: "/myportofolioacadmicmeg/assets/paper_nstc.pdf",
+    urls: [
+      { label: "Proposal", href: "/myportofolioacadmicmeg/assets/paper_nstc.pdf" },
+    ],
+    dad: "420",
+  },
+  {
     id: 4,
     image: svgCard("#577870", "Master's Thesis"),
     title: "Knowledge Building & OECD Learning Compass Analysis",
