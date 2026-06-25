@@ -62,7 +62,7 @@ export const listProyek = [
       "Accepted at the 2026 AERA Annual Meeting (Los Angeles, April 8-12, 2026), selected from over 13,000 submissions. Placed in a Roundtable Session titled 'Innovative Tools for Supporting Social Emotional Learning,' reviewed by the SIG-Social and Emotional Learning panel.\n\nDeveloped a RAG-Enhanced AI pipeline that audits K-12 lesson plans for cognitive, affective, and psychomotor balance. The system fine-tunes a RoBERTa classifier on Bloom's Taxonomy and CASEL SEL frameworks, achieving k = 0.83 inter-rater reliability. AI-assisted revision increased SEL coverage from 17% to 32% (t = 7.82, p < .01). Funded by NSTC, Taiwan.",
     borderColor: "#1F97A6",
     gradient: "linear-gradient(145deg, #1F97A6 0%, #0a0a0a 100%)",
-    url: "https://github.com/Megan123123",
+    url: "/myportofolioacadmicmeg/assets/paper_aera2026.pdf",
     dad: "100",
   },
   {
@@ -75,7 +75,7 @@ export const listProyek = [
       "Presented at the International Symposium on Teacher Agency and Educational Reform (「教師能動性與教育改革」國際學術研討會), National Tsing Hua University Teacher Education Center, June 7, 2025. 5,937 words.\n\nBuilt a RAG pipeline to audit and revise K–12 lesson plans in Taiwan, bridging the SEL gap and expanding teacher agency. Fine-tuned a RoBERTa classifier to detect SEL-relevant instructional objectives, achieving κ = 0.83. SEL coverage increased from 17% to 32% after AI-assisted augmentation (t = 7.82, p < .01).",
     borderColor: "#1F97A6",
     gradient: "linear-gradient(145deg, #1F97A6 0%, #0a0a0a 100%)",
-    url: "https://github.com/Megan123123",
+    url: "/myportofolioacadmicmeg/assets/paper_nthu_poster.pdf",
     dad: "100",
   },
   {
@@ -88,7 +88,7 @@ export const listProyek = [
       "Oral presentation at the 2025 9th International Conference on Education and E-Learning (ICEEL), Otsuma Women's University, Tokyo, November 21–22, 2025. 5,416 words.\n\nApplied large language models to systematically audit 50 K–12 lesson plans, identifying alignment gaps with curriculum standards. Demonstrated scalable AI-assisted content analysis for educational policy and curriculum design.",
     borderColor: "#0891b2",
     gradient: "linear-gradient(145deg, #0891b2 0%, #0a0a0a 100%)",
-    url: "https://github.com/Megan123123",
+    url: "/myportofolioacadmicmeg/assets/paper_iceel.pdf",
     dad: "200",
   },
   {
@@ -101,7 +101,7 @@ export const listProyek = [
       "Oral presentation at <Unbordered Educators: Transcend Within, Across Borders, and Disciplines>, Department of Learning and Teaching (International Master's Program), University of Taipei, November 8, 2025. 6,658 words.\n\nComparative policy analysis of Taiwan's Foreign English Teacher Program (TFETP) against OECD recruitment frameworks. Examines structural alignment gaps and proposes evidence-based policy levers.",
     borderColor: "#127B99",
     gradient: "linear-gradient(145deg, #127B99 0%, #0a0a0a 100%)",
-    url: "https://github.com/Megan123123",
+    url: "/myportofolioacadmicmeg/assets/paper_utaipei.pdf",
     dad: "300",
   },
   // ── AI / NLP Research ─────────────────────────────────────────────────────
