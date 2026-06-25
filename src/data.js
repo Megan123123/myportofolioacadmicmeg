@@ -77,9 +77,8 @@ export const listProyek = [
     gradient: "linear-gradient(145deg, #1F97A6 0%, #0a0a0a 100%)",
     url: "/myportofolioacadmicmeg/assets/paper_nthu_poster.pdf",
     urls: [
-      { label: "Poster", href: "/myportofolioacadmicmeg/assets/poster_nthu_file.pdf" },
+      { label: "Certificate", href: "/myportofolioacadmicmeg/assets/poster_nthu_file.pdf" },
       { label: "Paper", href: "/myportofolioacadmicmeg/assets/paper_nthu_poster.pdf" },
-      { label: "獎狀", href: "/myportofolioacadmicmeg/assets/cert_nthu.pdf" },
     ],
     dad: "100",
   },
