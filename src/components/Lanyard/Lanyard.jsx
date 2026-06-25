@@ -7,8 +7,8 @@ import { BallCollider, CuboidCollider, Physics, RigidBody, useRopeJoint, useSphe
 import { MeshLineGeometry, MeshLineMaterial } from 'meshline';
 
 // replace with your own imports, see the usage snippet for details
-const cardGLB = "/portofolio/assets/card.glb";
-const lanyard = "/portofolio/assets/lanyard.png";
+const cardGLB = "/myportofolioacadmicmeg/assets/card.glb";
+const lanyard = "/myportofolioacadmicmeg/assets/lanyard.png";
 
 import * as THREE from 'three';
 import './Lanyard.css';
@@ -37,12 +37,118 @@ export default function Lanyard({ position = [0, 0, 30], gravity = [0, -40, 0], 
     </div>
   );
 }
+function useHeadshotCardTexture() {
+  const [cardTex, setCardTex] = useState(null);
+  useEffect(() => {
+    const canvas = document.createElement('canvas');
+    canvas.width = 512;
+    canvas.height = 716;
+    const ctx = canvas.getContext('2d');
+
+    const draw = (img) => {
+      const CX = 120;   // GLB card UV center (calibrated)
+      const CW = 210;   // usable width
+
+      // ── Background ──────────────────────────────────────────────────────
+      ctx.fillStyle = '#0b1618';
+      ctx.fillRect(0, 0, 512, 716);
+
+      // ── Clip hole ─────────────────────────────────────────────────────
+      ctx.fillStyle = '#243a3a';
+      ctx.beginPath();
+      ctx.roundRect(CX - 28, 18, 56, 18, 9);
+      ctx.fill();
+
+      // ── Photo (full card height, equal-ratio) ──────────────────────────
+      // ── Front: photo, no clipping ────────────────────────────────────────
+      if (img) {
+        const maxW = CW;
+        const maxH = 660;
+        const scale = Math.max(maxW / img.naturalWidth, maxH / img.naturalHeight);
+        const dw = img.naturalWidth * scale;
+        const dh = img.naturalHeight * scale;
+        const dx = CX - dw / 2;
+        const dy = 44 + (maxH - dh) / 2;
+        ctx.drawImage(img, dx, dy, dw, dh);
+      }
+
+      // ── Back face (UV maps to x=256..512, drawn mirrored) ────────────────
+      const BCX = 384;  // center of back UV region in canvas
+      // Dark background for back
+      const bg = ctx.createLinearGradient(256, 0, 512, 716);
+      bg.addColorStop(0, '#0a1a1a'); bg.addColorStop(1, '#0d2020');
+      ctx.fillStyle = bg;
+      ctx.fillRect(256, 0, 256, 716);
+
+      ctx.textAlign = 'center';
+
+      // Decorative teal line top
+      ctx.strokeStyle = '#1F97A6';
+      ctx.lineWidth = 2;
+      ctx.globalAlpha = 0.5;
+      ctx.beginPath(); ctx.moveTo(BCX - 80, 200); ctx.lineTo(BCX + 80, 200); ctx.stroke();
+      ctx.globalAlpha = 1;
+
+      // Name
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 24px Arial, sans-serif';
+      ctx.fillText('Shun Ching Hsieh', BCX, 260);
+
+      // Role badge
+      const bW = 180, bH = 26, bX = BCX - bW/2, bY = 272;
+      const gr = ctx.createLinearGradient(bX, 0, bX + bW, 0);
+      gr.addColorStop(0, '#1F97A6'); gr.addColorStop(1, '#0891b2');
+      ctx.fillStyle = gr;
+      ctx.beginPath(); ctx.roundRect(bX, bY, bW, bH, 13); ctx.fill();
+      ctx.fillStyle = '#fff';
+      ctx.font = 'bold 13px Arial, sans-serif';
+      ctx.fillText('HCI Researcher · PhD 2026', BCX, bY + 17);
+
+      ctx.fillStyle = 'rgba(180,230,230,0.8)';
+      ctx.font = '14px Arial, sans-serif';
+      ctx.fillText('NCCU · M.Ed. EdTech', BCX, 326);
+
+      ctx.strokeStyle = '#1a3030';
+      ctx.lineWidth = 1;
+      ctx.beginPath(); ctx.moveTo(BCX-80, 342); ctx.lineTo(BCX+80, 342); ctx.stroke();
+
+      ctx.fillStyle = '#1F97A6';
+      ctx.font = 'bold 11px Arial, sans-serif';
+      ctx.fillText('Human-AI · LLM · EdTech', BCX, 362);
+
+      ctx.fillStyle = 'rgba(150,210,210,0.65)';
+      ctx.font = '11px Arial, sans-serif';
+      ctx.fillText('megan1001m@gmail.com', BCX, 384);
+
+      // Bottom teal line
+      ctx.strokeStyle = '#1F97A6';
+      ctx.lineWidth = 2;
+      ctx.globalAlpha = 0.5;
+      ctx.beginPath(); ctx.moveTo(BCX-80, 402); ctx.lineTo(BCX+80, 402); ctx.stroke();
+      ctx.globalAlpha = 1;
+
+      const tex = new THREE.CanvasTexture(canvas);
+      tex.flipY = false;
+      tex.needsUpdate = true;
+      setCardTex(tex);
+    };
+
+    const img = new window.Image();
+    img.crossOrigin = 'anonymous';
+    img.onload = () => draw(img);
+    img.onerror = () => draw(null);
+    img.src = '/myportofolioacadmicmeg/assets/me badge.png';
+  }, []);
+  return cardTex;
+}
+
 function Band({ maxSpeed = 50, minSpeed = 0 }) {
   const band = useRef(), fixed = useRef(), j1 = useRef(), j2 = useRef(), j3 = useRef(), card = useRef();
   const vec = new THREE.Vector3(), ang = new THREE.Vector3(), rot = new THREE.Vector3(), dir = new THREE.Vector3();
   const segmentProps = { type: 'dynamic', canSleep: true, colliders: false, angularDamping: 4, linearDamping: 4 };
   const { nodes, materials } = useGLTF(cardGLB);
   const texture = useTexture(lanyard);
+  const cardTexture = useHeadshotCardTexture();
   const [curve] = useState(() => new THREE.CatmullRomCurve3([new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3(), new THREE.Vector3()]));
   const [dragged, drag] = useState(false);
   const [hovered, hover] = useState(false);
@@ -123,7 +229,7 @@ function Band({ maxSpeed = 50, minSpeed = 0 }) {
             onPointerUp={(e) => (e.target.releasePointerCapture(e.pointerId), drag(false))}
             onPointerDown={(e) => (e.target.setPointerCapture(e.pointerId), drag(new THREE.Vector3().copy(e.point).sub(vec.copy(card.current.translation()))))}>
             <mesh geometry={nodes.card.geometry}>
-              <meshPhysicalMaterial map={materials.base.map} map-anisotropy={16} clearcoat={1} clearcoatRoughness={0.15} roughness={0.9} metalness={0.8} />
+              <meshPhysicalMaterial map={cardTexture || materials.base.map} map-anisotropy={16} clearcoat={1} clearcoatRoughness={0.15} roughness={0.9} metalness={0.8} />
             </mesh>
             <mesh geometry={nodes.clip.geometry} material={materials.metal} material-roughness={0.3} />
             <mesh geometry={nodes.clamp.geometry} material={materials.metal} />

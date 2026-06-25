@@ -1,240 +1,162 @@
-import HeroImage from "/assets/hero-img.webp";
-
-const Image = {
-  HeroImage,
+// ── SVG icon generator ────────────────────────────────────────────────────────
+const icon = (label, bg) => {
+  const short = label.length > 4 ? label.slice(0, 3) : label;
+  const fs = short.length <= 2 ? 22 : short.length === 3 ? 18 : 14;
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64">
+    <rect width="64" height="64" rx="12" fill="${bg}"/>
+    <text x="32" y="${32 + fs * 0.38}" font-family="monospace" font-size="${fs}" font-weight="bold"
+      fill="white" text-anchor="middle" dominant-baseline="middle">${short}</text>
+  </svg>`;
+  return `data:image/svg+xml;base64,${btoa(svg)}`;
 };
 
-export default Image;
+// ── SVG placeholder for project cards ─────────────────────────────────────────
+const svgCard = (bg, label) => {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="320" height="200" viewBox="0 0 320 200">
+    <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="${bg}"/>
+      <stop offset="100%" stop-color="#0a0a0a"/>
+    </linearGradient></defs>
+    <rect width="320" height="200" fill="url(#g)"/>
+    <text x="160" y="100" font-family="sans-serif" font-size="13" font-weight="600"
+      fill="white" text-anchor="middle" dominant-baseline="middle" opacity="0.9">${label}</text>
+  </svg>`;
+  return `data:image/svg+xml;base64,${btoa(svg)}`;
+};
 
-import Tools1 from "/assets/tools/vscode.png";
-import Tools2 from "/assets/tools/reactjs.png";
-import Tools3 from "/assets/tools/nextjs.png";
-import Tools4 from "/assets/tools/tailwind.png";
-import Tools5 from "/assets/tools/bootstrap.png";
-import Tools6 from "/assets/tools/js.png";
-import Tools7 from "/assets/tools/nodejs.png";
-import Tools8 from "/assets/tools/github.png";
-import Tools9 from "/assets/tools/ai.png";
-import Tools10 from "/assets/tools/canva.png";
-import Tools11 from "/assets/tools/figma.png";
-import Tools12 from "/assets/tools/kotlin.png";
-import Tools13 from "/assets/tools/firebase.png";
-import Tools14 from "/assets/tools/html.png";
-import Tools15 from "/assets/tools/css.png";
-import Tools16 from "/assets/tools/ts.png";
-import Tools17 from "/assets/tools/php.png";
-import Tools18 from "/assets/tools/vite.png";
-import Tools19 from "/assets/tools/mysql.png";
-
-
+// ── Skills — grouped by category ──────────────────────────────────────────────
 export const listTools = [
   {
-    id: 1,
-    gambar: Tools1,
-    nama: "Visual Studio Code",
-    ket: "Code Editor",
-    dad: "100",
+    category: "Programming",
+    items: ["Python", "R", "SQL"],
   },
   {
-    id: 2,
-    gambar: Tools2,
-    nama: "React JS",
-    ket: "Framework",
-    dad: "200",
+    category: "Data Science",
+    items: ["pandas", "NumPy", "scikit-learn", "PyTorch"],
   },
   {
-    id: 3,
-    gambar: Tools3,
-    nama: "Next JS",
-    ket: "Framework",
-    dad: "300",
+    category: "AI / NLP",
+    items: ["HuggingFace Transformers", "RoBERTa Fine-tuning", "RAG Pipeline", "Prompt Engineering", "OpenAI API", "Anthropic API"],
   },
   {
-    id: 4,
-    gambar: Tools4,
-    nama: "Tailwind CSS",
-    ket: "Framework",
-    dad: "400",
+    category: "Research Methods",
+    items: ["Quantitative Research", "Mixed-Methods Research", "Learning Analytics", "Qualitative Coding"],
   },
   {
-    id: 5,
-    gambar: Tools5,
-    nama: "Bootstrap",
-    ket: "Framework",
-    dad: "500",
-  },
-  {
-    id: 6,
-    gambar: Tools6,
-    nama: "Javascript",
-    ket: "Language",
-    dad: "600",
-  },
-  {
-    id: 7,
-    gambar: Tools7,
-    nama: "Node JS",
-    ket: "Javascript Runtime",
-    dad: "700",
-  },
-  {
-    id: 8,
-    gambar: Tools8,
-    nama: "Github",
-    ket: "Repository",
-    dad: "800",
-  },
-  {
-    id: 9,
-    gambar: Tools9,
-    nama: "Adobe Illustrator",
-    ket: "Design App",
-    dad: "900",
-  },
-  {
-    id: 10,
-    gambar: Tools10,
-    nama: "Canva",
-    ket: "Design App",
-    dad: "1000",
-  },
-  {
-    id: 11,
-    gambar: Tools11,
-    nama: "Figma",
-    ket: "Design App",
-    dad: "1100",
-  },
-  {
-    id: 12,
-    gambar: Tools12,
-    nama: "Kotlin",
-    ket: "Language",
-    dad: "1200",
-  },
-  {
-    id: 13,
-    gambar: Tools13,
-    nama: "Firebase",
-    ket: "Framework",
-    dad: "1300",
-  },
-  {
-    id: 14,
-    gambar: Tools14,
-    nama: "HTML",
-    ket: "Language",
-    dad: "1400",
-  },
-  {
-    id: 15,
-    gambar: Tools15,
-    nama: "CSS",
-    ket: "Language",
-    dad: "1500",
-  },
-  {
-    id: 16,
-    gambar: Tools16,
-    nama: "TypeScript",
-    ket: "Language",
-    dad: "1600",
-  },
-  {
-    id: 17,
-    gambar: Tools17,
-    nama: "PHP",
-    ket: "Language",
-    dad: "1700",
-  },
-  {
-    id: 18,
-    gambar: Tools18,
-    nama: "Vite",
-    ket: "Framework",
-    dad: "1800",
-  },
-  {
-    id: 19,
-    gambar: Tools19,
-    nama: "MySql",
-    ket: "Framework",
-    dad: "1900",
+    category: "Learning Theory",
+    items: ["Knowledge Building", "SSRL", "OECD Learning Compass 2030", "Bloom's Taxonomy", "CASEL SEL Framework"],
   },
 ];
 
-import Proyek1 from "/assets/proyek/proyek1.jpg";
-import Proyek2 from "/assets/proyek/proyek2.jpg";
-import Proyek3 from "/assets/proyek/proyek3.jpg";
-import Proyek4 from "/assets/proyek/proyek4.jpg";
-import Proyek5 from "/assets/proyek/proyek5.jpg";
-import Proyek6 from "/assets/proyek/proyek6.jpg";
-
+// ── Research Projects ─────────────────────────────────────────────────────────
+// Categories: Conference Paper · AI / NLP Research · Data Science · Teaching
 export const listProyek = [
+  // ── Conference Papers ──────────────────────────────────────────────────────
+  {
+    id: 0,
+    image: svgCard("#1F97A6", "AERA 2026 · Roundtable"),
+    title: "Integrating RAG-Enhanced AI to Support Cognitive, Affective, and Psychomotor Balance in K–12 Lesson Plans",
+    subtitle: "Roundtable · AERA 2026 · SIG-SEL · Los Angeles, Apr 2026",
+    category: "Conference Paper",
+    fullDescription:
+      "Accepted at the 2026 AERA Annual Meeting (Los Angeles, April 8–12, 2026), selected from over 13,000 submissions. Placed in a Roundtable Session titled "Innovative Tools for Supporting Social Emotional Learning," reviewed by the SIG-Social and Emotional Learning panel.\n\nDeveloped a RAG-Enhanced AI pipeline that audits K–12 lesson plans for cognitive, affective, and psychomotor balance. The system fine-tunes a RoBERTa classifier on Bloom's Taxonomy and CASEL SEL frameworks, achieving κ = 0.83 inter-rater reliability. AI-assisted revision increased SEL coverage from 17% to 32% (t = 7.82, p < .01). Funded by NSTC, Taiwan.",
+    borderColor: "#1F97A6",
+    gradient: "linear-gradient(145deg, #1F97A6 0%, #0a0a0a 100%)",
+    url: "https://github.com/Megan123123",
+    dad: "100",
+  },
   {
     id: 1,
-    image: Proyek1,
-    title: "AIS Detection App",
-    subtitle: "A mobile application powered by Artificial Intelligence...",
-    fullDescription:"A mobile application powered by Artificial Intelligence and Machine Learning, developed to assist in the early detection of Adolescent Idiopathic Scoliosis (AIS). By analyzing patient data and patterns, the app provides predictions that can help doctors and patients take preventive measures. This project demonstrates the role of AI in modern healthcare by improving accuracy, accessibility, and efficiency in medical diagnosis.",
-    borderColor: "#3B82F6",
-    gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://github.com/rissss21",
+    image: svgCard("#1F97A6", "Conference · Poster"),
+    title: "RAG-Driven Revision of East-Asian Secondary Lesson Plans",
+    subtitle: "Poster · NTHU Teacher Education Center · Jun 2025",
+    category: "Conference Paper",
+    fullDescription:
+      "Presented at the International Symposium on Teacher Agency and Educational Reform (「教師能動性與教育改革」國際學術研討會), National Tsing Hua University Teacher Education Center, June 7, 2025. 5,937 words.\n\nBuilt a RAG pipeline to audit and revise K–12 lesson plans in Taiwan, bridging the SEL gap and expanding teacher agency. Fine-tuned a RoBERTa classifier to detect SEL-relevant instructional objectives, achieving κ = 0.83. SEL coverage increased from 17% to 32% after AI-assisted augmentation (t = 7.82, p < .01).",
+    borderColor: "#1F97A6",
+    gradient: "linear-gradient(145deg, #1F97A6 0%, #0a0a0a 100%)",
+    url: "https://github.com/Megan123123",
     dad: "100",
   },
   {
     id: 2,
-    image: Proyek2,
-    title: "IoT Air Quality Monitoring",
-    subtitle: "A smart IoT system designed to measure and analyze air quality...",
-    fullDescription:"A smart IoT system designed to measure and analyze air quality using sensors connected to a mobile application. The app provides real-time updates on air quality levels, empowering users to make healthier lifestyle decisions based on environmental conditions. This project showcases the potential of IoT in addressing environmental and public health issues.",
-    borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://github.com/rissss21",
+    image: svgCard("#0891b2", "Conference · Oral"),
+    title: "Using AI to Analyze Lesson Plans: An LLM-Assisted Content Audit of 50 K–12 Documents",
+    subtitle: "Oral · ICEEL 2025 · Otsuma Women's University · Nov 2025",
+    category: "Conference Paper",
+    fullDescription:
+      "Oral presentation at the 2025 9th International Conference on Education and E-Learning (ICEEL), Otsuma Women's University, Tokyo, November 21–22, 2025. 5,416 words.\n\nApplied large language models to systematically audit 50 K–12 lesson plans, identifying alignment gaps with curriculum standards. Demonstrated scalable AI-assisted content analysis for educational policy and curriculum design.",
+    borderColor: "#0891b2",
+    gradient: "linear-gradient(145deg, #0891b2 0%, #0a0a0a 100%)",
+    url: "https://github.com/Megan123123",
     dad: "200",
   },
   {
     id: 3,
-    image: Proyek3,
-    title: "IoT Heartbeat Monitoring System",
-    subtitle: "An IoT-based healthcare project developed to measure and monitor...",
-    fullDescription:"An IoT-based healthcare project developed to measure and monitor heart rate in real-time. The system connects sensors to a local web server, enabling users and healthcare providers to track data directly from a web interface. This project highlights the integration of hardware and software to create efficient medical solutions that can be applied in local clinics or personal health monitoring.",
-    borderColor: "#3B82F6",
-    gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://github.com/rissss21",
+    image: svgCard("#127B99", "Conference · Oral"),
+    title: "Aligning National Recruitment Levers with OECD Guidance: Taiwan's TFETP",
+    subtitle: "Oral · Unbordered Educators Conference · UTAIPEI · Nov 2025",
+    category: "Conference Paper",
+    fullDescription:
+      "Oral presentation at <Unbordered Educators: Transcend Within, Across Borders, and Disciplines>, Department of Learning and Teaching (International Master's Program), University of Taipei, November 8, 2025. 6,658 words.\n\nComparative policy analysis of Taiwan's Foreign English Teacher Program (TFETP) against OECD recruitment frameworks. Examines structural alignment gaps and proposes evidence-based policy levers.",
+    borderColor: "#127B99",
+    gradient: "linear-gradient(145deg, #127B99 0%, #0a0a0a 100%)",
+    url: "https://github.com/Megan123123",
     dad: "300",
   },
+  // ── AI / NLP Research ─────────────────────────────────────────────────────
   {
     id: 4,
-    image: Proyek4,
-    title: "Personal Web Portfolio",
-    subtitle: "An interactive web portfolio showcasing my professional journey...",
-    fullDescription:"An interactive web portfolio showcasing my professional journey, skills, and projects. Designed with a clean yet modern aesthetic, the portfolio highlights my technical expertise in web development, software engineering, and IoT. The site also serves as a central hub for potential employers and collaborators to explore my works, reflecting both my creativity and technical precision.",
-    borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://github.com/rissss21",
+    image: svgCard("#577870", "Master's Thesis"),
+    title: "Knowledge Building & OECD Learning Compass Analysis",
+    subtitle: "Master's Thesis · n = 133 lesson plans · Mixed-methods",
+    category: "AI / NLP Research",
+    fullDescription:
+      "Compared Taiwan's 108 Curriculum lesson plans with Knowledge Building lesson plans (n = 133). Operationalized the OECD Learning Compass 2030 across Agency (AG), Anticipation–Action–Reflection (AAR), and Transformative Competencies (TC). Key finding: AAR-cycle quality showed the largest effect size in differentiating high-quality collaborative lesson plans. Advisor: Prof. Huang-Yao Hong.",
+    borderColor: "#577870",
+    gradient: "linear-gradient(145deg, #577870 0%, #0a0a0a 100%)",
+    url: "https://github.com/Megan123123",
     dad: "400",
   },
-    {
+  // ── Data Science ──────────────────────────────────────────────────────────
+  {
     id: 5,
-    image: Proyek5,
-    title: "Color Blindness Detection App",
-    subtitle: "A cross-platform application available on both mobile and desktop...",
-    fullDescription:"A cross-platform application available on both mobile and desktop, created to help identify different types of color blindness through color recognition tests. The app provides users with instant results, making it useful for educational, medical, and self-assessment purposes. Its intuitive design and accessibility aim to support individuals in understanding and managing color vision deficiencies.",
-    borderColor: "#3B82F6",
-    gradient: "linear-gradient(145deg, #3B82F6, #000)",
-    url: "https://github.com/rissss21",
+    image: svgCard("#7C3AED", "Data Science"),
+    title: "Brain-to-Text EEG Neural Decoding",
+    subtitle: "Kaggle · PyTorch · Deep Learning",
+    category: "Data Science",
+    fullDescription:
+      "Processed EEG neural-signal datasets for brain-to-text decoding tasks. Implemented baseline ML and deep-learning models for neural-signal classification, including feature engineering, exploratory data analysis, and systematic model evaluation. Tech stack: Python, scikit-learn, PyTorch, pandas.",
+    borderColor: "#7C3AED",
+    gradient: "linear-gradient(145deg, #7C3AED 0%, #0a0a0a 100%)",
+    url: "https://github.com/Megan123123",
     dad: "500",
   },
   {
     id: 6,
-    image: Proyek6,
-    title: "Coffee Shop Website",
-    subtitle: "A fully functional website designed for a coffee shop, enabling...",
-    fullDescription:"A fully functional website designed for a coffee shop, enabling customers to explore the menu, learn about the shop’s story, and place orders online. The project focused on creating an attractive and modern interface, integrating responsive design for mobile and desktop, and ensuring smooth navigation for users. This website not only improved customer experience but also supported the coffee shop’s digital presence and business growth.",
-    borderColor: "#10B981",
-    gradient: "linear-gradient(180deg, #10B981, #000)",
-    url: "https://github.com/rissss21",
+    image: svgCard("#B45309", "Data Science"),
+    title: "Bike-Sharing Demand Prediction",
+    subtitle: "Time-series forecasting · pandas · scikit-learn",
+    category: "Data Science",
+    fullDescription:
+      "Built time-series forecasting models predicting bike availability across campus stations. Engineered lag-based and rolling-window statistical features, improving RMSE and MAE relative to baseline approaches. Tech stack: Python, pandas, scikit-learn, matplotlib.",
+    borderColor: "#B45309",
+    gradient: "linear-gradient(145deg, #B45309 0%, #0a0a0a 100%)",
+    url: "https://github.com/Megan123123",
     dad: "600",
+  },
+  // ── Teaching ──────────────────────────────────────────────────────────────
+  {
+    id: 7,
+    image: svgCard("#0F766E", "Teaching"),
+    title: "Junior High School Teaching Practicum",
+    subtitle: "Computer Technology · Taiwan 108 Curriculum · 2025–Present",
+    category: "Teaching",
+    fullDescription:
+      "Teacher-in-training for Computer Technology under Taiwan's 108 Curriculum. Observed how collaborative learning succeeds and breaks down in authentic classroom environments — directly witnessing student behaviors including disengagement, conversational derailment, surface compliance, and collaborative problem-solving.",
+    borderColor: "#0F766E",
+    gradient: "linear-gradient(145deg, #0F766E 0%, #0a0a0a 100%)",
+    url: "https://github.com/Megan123123",
+    dad: "700",
   },
 ];
