@@ -171,7 +171,7 @@ export const listProyek = [
       "Processed EEG neural-signal datasets for brain-to-text decoding tasks. Implemented baseline ML and deep-learning models for neural-signal classification, including feature engineering, exploratory data analysis, and systematic model evaluation. Tech stack: Python, scikit-learn, PyTorch, pandas.",
     borderColor: "#7C3AED",
     gradient: "linear-gradient(145deg, #7C3AED 0%, #0a0a0a 100%)",
-    url: "https://github.com/Megan123123",
+    url: "https://github.com/Megan123123/brain-to-text-eeg",
     dad: "500",
   },
   {
