@@ -67,7 +67,7 @@ export const listProyek = [
   },
   {
     id: 1,
-    image: svgCard("#1F97A6", "Conference · Poster"),
+    image: "/myportofolioacadmicmeg/assets/poster_nthu.jpg",
     title: "RAG-Driven Revision of East-Asian Secondary Lesson Plans",
     subtitle: "Poster · NTHU Teacher Education Center · Jun 2025",
     category: "Conference Paper",
