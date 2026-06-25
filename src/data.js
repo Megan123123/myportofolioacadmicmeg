@@ -59,7 +59,7 @@ export const listProyek = [
     subtitle: "Roundtable · AERA 2026 · SIG-SEL · Los Angeles, Apr 2026",
     category: "Conference Paper",
     fullDescription:
-      "Accepted at the 2026 AERA Annual Meeting (Los Angeles, April 8–12, 2026), selected from over 13,000 submissions. Placed in a Roundtable Session titled "Innovative Tools for Supporting Social Emotional Learning," reviewed by the SIG-Social and Emotional Learning panel.\n\nDeveloped a RAG-Enhanced AI pipeline that audits K–12 lesson plans for cognitive, affective, and psychomotor balance. The system fine-tunes a RoBERTa classifier on Bloom's Taxonomy and CASEL SEL frameworks, achieving κ = 0.83 inter-rater reliability. AI-assisted revision increased SEL coverage from 17% to 32% (t = 7.82, p < .01). Funded by NSTC, Taiwan.",
+      "Accepted at the 2026 AERA Annual Meeting (Los Angeles, April 8-12, 2026), selected from over 13,000 submissions. Placed in a Roundtable Session titled 'Innovative Tools for Supporting Social Emotional Learning,' reviewed by the SIG-Social and Emotional Learning panel.\n\nDeveloped a RAG-Enhanced AI pipeline that audits K-12 lesson plans for cognitive, affective, and psychomotor balance. The system fine-tunes a RoBERTa classifier on Bloom's Taxonomy and CASEL SEL frameworks, achieving k = 0.83 inter-rater reliability. AI-assisted revision increased SEL coverage from 17% to 32% (t = 7.82, p < .01). Funded by NSTC, Taiwan.",
     borderColor: "#1F97A6",
     gradient: "linear-gradient(145deg, #1F97A6 0%, #0a0a0a 100%)",
     url: "https://github.com/Megan123123",
