@@ -79,7 +79,7 @@ export const listProyek = [
     urls: [
       { label: "Poster", href: "/myportofolioacadmicmeg/assets/poster_nthu_file.pdf" },
       { label: "Paper", href: "/myportofolioacadmicmeg/assets/paper_nthu_poster.pdf" },
-      { label: "Certificate", href: "/myportofolioacadmicmeg/assets/cert_nthu.png" },
+      { label: "獎狀", href: "/myportofolioacadmicmeg/assets/cert_nthu.pdf" },
     ],
     dad: "100",
   },
