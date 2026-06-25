@@ -65,15 +65,32 @@ const ProjectModal = ({ isOpen, onClose, project }) => {
                 {project.fullDescription}
             </p>
 
-            <a
+            {project.urls ? (
+              <div className="mt-4 flex flex-col gap-2">
+                {project.urls.map((u) => (
+                  <a
+                    key={u.label}
+                    href={u.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center justify-center gap-2 font-semibold bg-violet-600 p-3 px-5 rounded-full w-full cursor-pointer border border-transparent hover:bg-violet-700 transition-colors"
+                  >
+                    <FiGithub />
+                    <span>{u.label}</span>
+                  </a>
+                ))}
+              </div>
+            ) : (
+              <a
                 href={project.url}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-4 inline-flex items-center justify-center gap-2 font-semibold bg-violet-600 p-3 px-5 rounded-full w-full cursor-pointer border border-transparent hover:bg-violet-700 transition-colors"
-            >
+              >
                 <FiGithub />
                 <span>{project.url?.endsWith(".pdf") ? "View Paper (PDF)" : "Source Code"}</span>
-            </a>
+              </a>
+            )}
         </div>
       </div>
        {/* CSS untuk animasi */}

@@ -76,6 +76,10 @@ export const listProyek = [
     borderColor: "#1F97A6",
     gradient: "linear-gradient(145deg, #1F97A6 0%, #0a0a0a 100%)",
     url: "/myportofolioacadmicmeg/assets/paper_nthu_poster.pdf",
+    urls: [
+      { label: "View Poster (PDF)", href: "/myportofolioacadmicmeg/assets/paper_nthu_poster.pdf" },
+      { label: "Certificate", href: "/myportofolioacadmicmeg/assets/cert_nthu.png" },
+    ],
     dad: "100",
   },
   {
