@@ -175,7 +175,7 @@ export const listProyek = [
     id: 7,
     image: svgCard("#0F766E", "Teaching"),
     title: "Junior High School Teaching Practicum",
-    subtitle: "Computer Technology · Taiwan 108 Curriculum · 2025–Present",
+    subtitle: "Computer Technology · Taiwan 108 Curriculum · 2025",
     category: "Teaching",
     fullDescription:
       "Teacher-in-training for Computer Technology under Taiwan's 108 Curriculum. Observed how collaborative learning succeeds and breaks down in authentic classroom environments — directly witnessing student behaviors including disengagement, conversational derailment, surface compliance, and collaborative problem-solving.",
