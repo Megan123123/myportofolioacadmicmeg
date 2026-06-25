@@ -97,7 +97,7 @@ export const listProyek = [
   },
   {
     id: 3,
-    image: svgCard("#127B99", "Conference · Oral"),
+    image: "/myportofolioacadmicmeg/assets/cover_utaipei.jpg",
     title: "Aligning National Recruitment Levers with OECD Guidance: Taiwan's TFETP",
     subtitle: "Oral · Unbordered Educators Conference · UTAIPEI · Nov 2025",
     category: "Conference Paper",
