@@ -68,7 +68,7 @@ export const listProyek = [
   {
     id: 1,
     image: "/myportofolioacadmicmeg/assets/poster_nthu.jpg",
-    title: "RAG-Driven Revision of East-Asian Secondary Lesson Plans",
+    title: "RAG-Driven Revision of East-Asian Secondary Lesson Plans: Bridging the SEL Gap and Empowering Teacher Agency in Taiwan",
     subtitle: "Poster · NTHU Teacher Education Center · Jun 2025",
     category: "Conference Paper",
     fullDescription:
