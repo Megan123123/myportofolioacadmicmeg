@@ -129,6 +129,23 @@ export const listProyek = [
     ],
     dad: "350",
   },
+  {
+    id: 5,
+    image: "/myportofolioacadmicmeg/assets/cover_icei.jpg",
+    title: "ICT Equipment Lifts Averages, Not Equity: Multilevel Evidence from Taiwan's TIMSS 2023",
+    subtitle: "Poster · 16th ICEi · NTHU College of Education · Nov 2025",
+    category: "Conference Paper",
+    fullDescription:
+      "Poster presentation at the 16th International Conference on Educational Innovation (ICEi), 'Teaching and Learning in the Super-Intelligent Era: Practices & Reflection of Interdisciplinary and Multimodal Education through AI Collaboration', National Tsing Hua University College of Education, November 21-22, 2025.\n\nUsing Taiwan Grade 8 data from TIMSS 2023 (N = 5,543 students, 184 schools), this study applied two-level hierarchical linear models with five plausible values and BRR/JK replicate-weight standard errors to assess whether school-level ICT investment raises mathematics performance and narrows achievement gaps.\n\nKey findings: (1) A +1 SD increase in ICT equipment associates with +8-10 TIMSS points (≈ 0.08-0.10 SD), but connectivity and technical support show no reliable direct effects. (2) ICT does not moderate SES-based achievement gaps. (3) Urban-rural gaps remain large (-27 to -53 points) and are unaffected by ICT level. (4) Substantial school clustering (ICC ≈ 0.26). Conclusion: hardware elevates averages, but equity requires more than infrastructure.",
+    borderColor: "#1F97A6",
+    gradient: "linear-gradient(145deg, #1F97A6 0%, #0a0a0a 100%)",
+    url: "/myportofolioacadmicmeg/assets/poster_icei.pdf",
+    urls: [
+      { label: "Poster", href: "/myportofolioacadmicmeg/assets/poster_icei.pdf" },
+      { label: "Certificate", href: "/myportofolioacadmicmeg/assets/cert_icei.pdf" },
+    ],
+    dad: "375",
+  },
   // ── AI / NLP Research ─────────────────────────────────────────────────────
   {
     id: 4,
